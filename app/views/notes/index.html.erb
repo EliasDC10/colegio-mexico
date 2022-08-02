@@ -1,0 +1,18 @@
+<div class="container-lg">
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class= "text-center">COLEGIO DE MEXICO</h1>
+    <%= render partial: 'partials/navbar' %>
+  <h3 class= "text-center"> Informacion De Actividades Escolares</h3>
+  <%= link_to "Nueva Publicacion", new_note_path %>
+  <div id="notes">
+    <% @notes.each do |note| %>
+      <%= render note %>
+      <p>
+        <%= link_to "Ver publicacion", note %>
+      </p>
+    <% end %>
+  </div>
+
+  
+</div>

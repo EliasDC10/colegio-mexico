@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+  <h1 class= "text-center">COLEGIO DE MEXICO</h1>
+  <%= render partial: 'partials/navbar' %>
+<%= render @note %>
+
+<div class="container-lg">
+  <%= link_to "Edit this note", edit_note_path(@note) %> |
+  <%= link_to "Back to notes", notes_path %>
+
+  <%= button_to "Destroy this note", @note, method: :delete %>
+</div>
